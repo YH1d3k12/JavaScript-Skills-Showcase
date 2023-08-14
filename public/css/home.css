@@ -1,0 +1,25 @@
+@font-face {
+    font-family: 'Libra-Serif-Modern';
+    src: url(/fonts/libra-serif-modern.regular.otf) format('opentype');
+}
+@font-face {
+    font-family: 'Montserrat';
+    src: url(/fonts/Montserrat-Light.ttf) format('truetype');
+}
+
+:root{
+    --page-background-color:#585c44;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    border: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    background-color: #585c44;
+}
