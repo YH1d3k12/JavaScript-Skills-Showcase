@@ -7,13 +7,27 @@
     src: url(/fonts/Montserrat-Light.ttf) format('truetype');
 }
 
-:root{
-    --page-background-color:#858AE3;
-    --menu-background-color: #4E148C;
-    --menu-title-color: #F7F7FF;
-    --button-background-color: #613DC1;
-    --button-color: #F7F7FF;
-    --button-transiction-color: #E6C229;
+:root
+{
+    /* Toggle button colors */
+
+    /* Exercise layout colors */
+    --page-exercise-background-color:#858AE3;
+    --menu-exercise-background-color:#4E148C;
+    --menu-exercise-title-color:#FBF5F3;
+    --button-exercise-border-color: #7950e8;
+    --button-exercise-background-color:#613DC1;
+    --button-exercise-color:#FBF5F3;
+    --button-exercise-transiction-color:#E6C229;
+    /* Challenges layour colors */
+    --page-challenge-background-color:#FFABA1;
+    --menu-challenge-background-color:#BD3333;
+    --menu-challenge-title-color:#FBF5F3;
+    --button-challenge-border-color: #e26b6b;
+    --button-challenge-background-color:#D55858;
+    --button-challenge-color:#FBF5F3;
+    --button-challenge-transiction-color:#FFBF00;
+
 }
 
 * {
@@ -23,70 +37,134 @@
     margin: 0;
     text-decoration: none;
     list-style: none;
-    /* border: solid 1px black; */
 }
 
 body {
-    background-color: var(--page-background-color);
+    background-color: var(--page-exercise-background-color);
 }
+
+.grid_container {
+    display: grid;
+    grid-template-columns: 25vw 1fr; /* 20vw for the left column, 1fr for the right column */
+    height: 100vh;
+}
+
 
 .menu {
     display: flex;
     flex-direction: column;
     align-items: center;
 
-    width: 450px;
-    height: 100vh;
-
-    background-color: var(--menu-background-color);
+    background-color: var(--menu-exercise-background-color);
 }
 
-.menu_title {
+/* Menu title and list toggle button */
+
+.title_and_button_wrapper {
+    display: flex;
+    margin-top: 30px;
+}
+
+.menu_list_title {
     margin: 20px;
 
     font-family: 'Montserrat';
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     font-weight: 300;
-    color: var(--menu-title-color);
+    color: var(--menu-exercise-title-color);
 }
 
-.menu_scroll {
-    overflow: auto;
-}
+.toggle_list_button {
+    width: 120px;
+    border: solid 3px var(--button-exercise-border-color);
 
-.menu_scroll::-webkit-scrollbar {
-    width: 8px;
-    height: 35vh;
-    background-color: #E7E7E7;
-    border-radius: 10px;
-}  
-
-.menu_scroll::-webkit-scrollbar-thumb {  
-    background-color: #eb1a1a;
-    border-radius: 100px;
-}  
-
-.menu_button {
-    width: 320px;
-    padding: 10px;
-    margin: 15px;
-
-    border-radius: 100px;
-    background-color: var(--button-background-color);
-    cursor: pointer;
-}
-
-.menu_button a {
     font-family: 'Montserrat';
     font-size: 1.2rem;
     font-weight: 300;
 
-    color: var(--button-color);
+    border-radius: 100px;
+    background-color: var(--button-exercise-background-color);
+    color: var(--button-exercise-color);
+    cursor: pointer;
 }
 
-.menu_button a:hover {
-    font-size: 1.225rem;
+/* Setting challenges list display as none by default */
+#challenges_list {
+    display: none;
+}
 
-    color: #f3c1b5;
+/* Style for the scroll bar in list */
+
+.menu_scroll {
+    max-height: calc(100vh - 150px);
+    overflow: auto;
+}
+
+.menu_scroll::-webkit-scrollbar {
+    width: 0.000001px;
+}  
+
+/* Style for both exercise and challenge buttons */
+
+.list_button {
+    display: flex;
+
+    width: 320px;
+    padding: 10px;
+    margin: 30px;
+
+    font-family: 'Montserrat';
+    font-size: 1.2rem;
+    font-weight: 300;
+
+    border-radius: 100px;
+    cursor: pointer;
+}
+
+/* Style for exercise buttons */
+
+.exercise_button {
+    border: solid 3px var(--button-exercise-border-color);
+    background-color: var(--button-exercise-background-color);
+}
+
+.exercise_button h4 {
+    margin: 0px 10px;
+    color: var(--button-exercise-color);
+}
+
+.exercise_button a {
+    color: var(--button-exercise-color);
+}
+
+/* Style for challenge buttons */
+
+.challenge_button {
+    border: solid 3px var(--button-challenge-border-color);
+    background-color: var(--button-challenge-background-color);
+}
+
+.challenge_button h4 {
+    margin: 0px 10px;
+    color: var(--button-challenge-color);
+}
+
+.challenge_button a {
+    color: var(--button-challenge-color);
+}
+
+/* Hover effects on exercise and challenge buttons */
+
+.exercise_button:hover h4, .exercise_button:hover a{
+    font-size: 1.25rem;
+
+    color: var(--button-exercise-transiction-color);
+    transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
+}
+
+.challenge_button:hover h4, .challenge_button:hover a{
+    font-size: 1.25rem;
+
+    color: var(--button-challenge-transiction-color);
     transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
 }
