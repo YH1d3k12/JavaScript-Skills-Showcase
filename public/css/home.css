@@ -1,11 +1,4 @@
-@font-face {
-    font-family: 'Libra-Serif-Modern';
-    src: url(/fonts/libra-serif-modern.regular.otf) format('opentype');
-}
-@font-face {
-    font-family: 'Montserrat';
-    src: url(/fonts/Montserrat-Light.ttf) format('truetype');
-}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root
 {
@@ -19,7 +12,7 @@
     --button-exercise-background-color:#613DC1;
     --button-exercise-color:#FBF5F3;
     --button-exercise-transiction-color:#E6C229;
-    /* Challenges layour colors */
+    /* Challenges layout colors */
     --page-challenge-background-color:#FFABA1;
     --menu-challenge-background-color:#BD3333;
     --menu-challenge-title-color:#FBF5F3;
@@ -27,6 +20,22 @@
     --button-challenge-background-color:#D55858;
     --button-challenge-color:#FBF5F3;
     --button-challenge-transiction-color:#FFBF00;
+    /* Extra layout colors */
+    --page-extra-background-color:#87CBAC;
+    --menu-extra-background-color:#34623F;
+    --menu-extra-title-color:#1E1E24;
+    --button-extra-border-color:#598335;
+    --button-extra-background-color:#4F772D;
+    --button-extra-color:#1E1E24;
+    --button-extra-transiction-color:#90FFDC;
+    /* Query Params layour colors */
+    --page-qp-background-color:#FADF94;
+    --menu-qp-background-color: #C4A85B;
+    --menu-qp-title-color:#1E1E24;
+    --button-qp-border-color:#ffedbb;
+    --button-qp-background-color:#FFE9AD;
+    --button-qp-color:#1E1E24;
+    --button-qp-transiction-color:#F85A3E;
 
 }
 
@@ -40,21 +49,21 @@
 }
 
 body {
+    /* This color is going to change with the js */
     background-color: var(--page-exercise-background-color);
 }
 
 .grid_container {
     display: grid;
-    grid-template-columns: 25vw 1fr; /* 20vw for the left column, 1fr for the right column */
+    grid-template-columns: 25vw 1fr;
     height: 100vh;
 }
-
 
 .menu {
     display: flex;
     flex-direction: column;
     align-items: center;
-
+    /* This color is going to change with the js */
     background-color: var(--menu-exercise-background-color);
 }
 
@@ -62,15 +71,16 @@ body {
 
 .title_and_button_wrapper {
     display: flex;
-    margin-top: 30px;
+    margin: 30px 0px;
 }
 
 .menu_list_title {
     margin: 20px;
 
     font-family: 'Montserrat';
-    font-size: 1.4rem;
-    font-weight: 300;
+    font-size: 1.2rem;
+    font-weight: 500;
+    /* This color is going to change with the js */
     color: var(--menu-exercise-title-color);
 }
 
@@ -79,49 +89,49 @@ body {
     border: solid 3px var(--button-exercise-border-color);
 
     font-family: 'Montserrat';
-    font-size: 1.2rem;
-    font-weight: 300;
+    font-size: 1rem;
+    font-weight: 500;
 
     border-radius: 100px;
+    /* These colors are going to change with the js */
     background-color: var(--button-exercise-background-color);
     color: var(--button-exercise-color);
     cursor: pointer;
 }
 
-/* Setting challenges list display as none by default */
-#challenges_list {
-    display: none;
-}
-
 /* Style for the scroll bar in list */
+.menu_list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
-.menu_scroll {
     max-height: calc(100vh - 150px);
     overflow: auto;
 }
 
-.menu_scroll::-webkit-scrollbar {
+.menu_list::-webkit-scrollbar {
     width: 0.000001px;
 }  
 
-/* Style for both exercise and challenge buttons */
+/* Style for all buttons */
 
 .list_button {
     display: flex;
 
-    width: 320px;
+    /* width: 320px; */
+    width: 90%;
     padding: 10px;
     margin: 30px;
 
     font-family: 'Montserrat';
-    font-size: 1.2rem;
-    font-weight: 300;
+    font-size: 1rem;
+    font-weight: 500;
 
     border-radius: 100px;
     cursor: pointer;
 }
 
-/* Style for exercise buttons */
+/* Exercise list specific settings */
 
 .exercise_button {
     border: solid 3px var(--button-exercise-border-color);
@@ -137,7 +147,18 @@ body {
     color: var(--button-exercise-color);
 }
 
-/* Style for challenge buttons */
+.exercise_button:hover h4, .exercise_button:hover a {
+    font-size: 1.1rem;
+
+    color: var(--button-exercise-transiction-color);
+    transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
+}
+
+/* Challenges list specific settings */
+
+#challenges_list {
+    display: none;
+}
 
 .challenge_button {
     border: solid 3px var(--button-challenge-border-color);
@@ -153,18 +174,64 @@ body {
     color: var(--button-challenge-color);
 }
 
-/* Hover effects on exercise and challenge buttons */
-
-.exercise_button:hover h4, .exercise_button:hover a{
-    font-size: 1.25rem;
-
-    color: var(--button-exercise-transiction-color);
-    transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
-}
-
-.challenge_button:hover h4, .challenge_button:hover a{
-    font-size: 1.25rem;
+.challenge_button:hover h4, .challenge_button:hover a {
+    font-size: 1.1rem;
 
     color: var(--button-challenge-transiction-color);
     transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
 }
+
+/* Extra list specific settings */
+
+#extra_list {
+    display: none;
+}
+
+.extra_button {
+    border: solid 3px var(--button-extra-border-color);
+    background-color: var(--button-extra-background-color);
+}
+
+.extra_button h4 {
+    margin: 0px 10px;
+    color: var(--button-extra-color);
+}
+
+.extra_button a {
+    color: var(--button-extra-color);
+}
+
+.extra_button:hover h4, .extra_button:hover a {
+    font-size: 1.1rem;
+
+    color: var(--button-extra-transiction-color);
+    transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
+}
+
+/* Query Params list specific settings */
+
+#qp_list {
+    display: none;
+}
+
+.qp_button {
+    border: solid 3px var(--button-qp-border-color);
+    background-color: var(--button-qp-background-color);
+}
+
+.qp_button h4 {
+    margin: 0px 10px;
+    color: var(--button-qp-color);
+}
+
+.qp_button a {
+    color: var(--button-qp-color);
+}
+
+.qp_button:hover h4, .qp_button:hover a {
+    font-size: 1.1rem;
+
+    color: var(--button-qp-transiction-color);
+    transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
+}
+
