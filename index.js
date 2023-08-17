@@ -28,14 +28,25 @@ app.get('/api/:id', (req, res) => {
     });
 });
 
+app.get('/views/query1', (req, res) => {
+    let num1 = parseFloat(req.query.num1);
+    let num2 = parseFloat(req.query.num2);
+
+    if (isNaN(num1) || isNaN(num2))
+    {
+        res.status(501).json({
+            message: `Ensira dois números`
+        });
+        return;
+    }
+    else
+    {
+        res.json({
+            message: `Resultado: ${num1 + num2}`
+        });
+    }
+});
+
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });
-
-// app.get("/", (req, res) => {
-//     res.send(console.log("Hello World!"));
-// });
-
-// app.get('/', (_, res) => {
-//     res.json({ message: 'Batata!' });
-// });
