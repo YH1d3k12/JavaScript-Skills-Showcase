@@ -3,4 +3,4 @@ This is a repository containing exercises from the 'Jovem Programador' developer
 
 Use the following command to start the application
 
-npx nodemon index.js
+npm start

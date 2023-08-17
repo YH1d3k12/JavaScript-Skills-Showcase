@@ -101,8 +101,6 @@ body {
 
 /* Style for the scroll bar in list */
 .menu_list {
-    display: flex;
-    flex-direction: column;
     justify-content: center;
 
     max-height: calc(100vh - 150px);
@@ -118,8 +116,7 @@ body {
 .list_button {
     display: flex;
 
-    /* width: 320px; */
-    width: 90%;
+    width: 320px;
     padding: 10px;
     margin: 30px;
 
