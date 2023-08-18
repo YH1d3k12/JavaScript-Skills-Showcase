@@ -9,182 +9,183 @@
 </head>
 <body id="body">
     <div class="grid_container">
-        <nav id="menu" class="menu">
-            <div class="title_and_button_wrapper">
-                <h1 id="menu_list_title" class="menu_list_title">Lista de Exercícios</h1>
-                <button id="toggle_list_button" class="toggle_list_button">Trocar Lista</button>
-            </div>
+        <header id="menu_wrapper" class="menu_wrapper">
+            <nav class="menu">
+                <div class="title_and_button_wrapper">
+                    <h1 id="menu_list_title" class="menu_list_title">Lista de Exercícios</h1>
+                    <button id="toggle_list_button" class="toggle_list_button">Trocar Lista</button>
+                </div>
+    
+                <!-- Exercise List -->
+                <ul id="exercises_list" class="menu_list">
+                    <li>
+                        <button class="list_button exercise_button" file_name="exercises/exercise1">
+                            <h4>#1 - </h4>
+                            <a>Somar Dois Números</a>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="list_button exercise_button" file_name="exercises/exercise2">
+                            <h4>#2 - </h4>
+                            <a>Valor por Hora Trabalhada</a>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="list_button exercise_button">
+                            <h4>#3 - </h4>
+                            <a>Média de Peso</a>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="list_button exercise_button">
+                            <h4>#4 - </h4>
+                            <a>Conversão de Temperatura</a>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="list_button exercise_button">
+                            <h4>#5 - </h4>
+                            <a>Conversão de Distância</a>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="list_button exercise_button">
+                            <h4>#6 - </h4>
+                            <a>Separador de Tempo</a>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="list_button exercise_button">
+                            <h4>#7 - </h4>
+                            <a>Separador de Metragem</a>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="list_button exercise_button">
+                            <h4>#8 - </h4>
+                            <a>Tabuada</a>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="list_button exercise_button">
+                            <h4>#9 - </h4>
+                            <a>Média Aritmética</a>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="list_button exercise_button">
+                            <h4>#10 - </h4>
+                            <a>Calculadora Básica</a>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="list_button exercise_button">
+                            <h4>#11 - </h4>
+                            <a>Calculo IMC</a>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="list_button exercise_button">
+                            <h4>#12 - </h4>
+                            <a>Verificar Número</a>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="list_button exercise_button">
+                            <h4>#13 - </h4>
+                            <a>Par ou Impar</a>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="list_button exercise_button">
+                            <h4>#14 - </h4>
+                            <a>Par ou Impar</a>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="list_button exercise_button">
+                            <h4>#15 - </h4>
+                            <a>Qual é Maior?</a>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="list_button exercise_button">
+                            <h4>#16 - </h4>
+                            <a>Triângulo?</a>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="list_button exercise_button">
+                            <h4>#16 - </h4>
+                            <a>Imposto de Renda</a>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="list_button exercise_button">
+                            <h4>#17 - </h4>
+                            <a>Média Ponderada</a>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="list_button exercise_button">
+                            <h4>#18 - </h4>
+                            <a>Calculo Fabrica</a>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="list_button exercise_button">
+                            <h4>#19 - </h4>
+                            <a>Calculo de Juros</a>
+                        </button>
+                    </li>
+                </ul>
+    
+                <!-- Challenges List -->
+                <ul id="challenges_list" class="menu_list">
+                    <li>
+                        <button class="challenge_button list_button">
+                            <h4>#1 - </h4>
+                            <a>Separador de Idade</a>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="challenge_button list_button">
+                            <h4>#2 - </h4>
+                            <a>Troca de Valores</a>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="challenge_button list_button">
+                            <h4>#3 - </h4>
+                            <a>Qual é Maior?</a>
+                        </button>
+                    </li>
+                </ul>
+    
+                <!-- Extra List -->
+                <ul id="extra_list" class="menu_list">
+                    <li>
+                        <button class="extra_button list_button">
+                            <h4>#1 - </h4>
+                            <a>??????</a>
+                        </button>
+                    </li>
+                </ul>
+    
+                <!-- Query Params List -->
+                <ul id="qp_list" class="menu_list">
+                    <li>
+                        <button class="qp_button list_button">
+                            <h4>#1 - </h4>
+                            <a href="/views/query1.html">Somar Dois Números</a>
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main id="content_section">
 
-            <!-- Exercise List -->
-            <ul id="exercises_list" class="menu_list">
-                <li>
-                    <button class="list_button exercise_button" file_name="exercises/exercise1">
-                        <h4>#1 - </h4>
-                        <a>Somar Dois Números</a>
-                    </button>
-                </li>
-                <li>
-                    <button class="list_button exercise_button" file_name="exercises/exercise2">
-                        <h4>#2 - </h4>
-                        <a>Valor por Hora Trabalhada</a>
-                    </button>
-                </li>
-                <li>
-                    <button class="list_button exercise_button">
-                        <h4>#3 - </h4>
-                        <a>Média de Peso</a>
-                    </button>
-                </li>
-                <li>
-                    <button class="list_button exercise_button">
-                        <h4>#4 - </h4>
-                        <a>Conversão de Temperatura</a>
-                    </button>
-                </li>
-                <li>
-                    <button class="list_button exercise_button">
-                        <h4>#5 - </h4>
-                        <a>Conversão de Distância</a>
-                    </button>
-                </li>
-                <li>
-                    <button class="list_button exercise_button">
-                        <h4>#6 - </h4>
-                        <a>Separador de Tempo</a>
-                    </button>
-                </li>
-                <li>
-                    <button class="list_button exercise_button">
-                        <h4>#7 - </h4>
-                        <a>Separador de Metragem</a>
-                    </button>
-                </li>
-                <li>
-                    <button class="list_button exercise_button">
-                        <h4>#8 - </h4>
-                        <a>Tabuada</a>
-                    </button>
-                </li>
-                <li>
-                    <button class="list_button exercise_button">
-                        <h4>#9 - </h4>
-                        <a>Média Aritmética</a>
-                    </button>
-                </li>
-                <li>
-                    <button class="list_button exercise_button">
-                        <h4>#10 - </h4>
-                        <a>Calculadora Básica</a>
-                    </button>
-                </li>
-                <li>
-                    <button class="list_button exercise_button">
-                        <h4>#11 - </h4>
-                        <a>Calculo IMC</a>
-                    </button>
-                </li>
-                <li>
-                    <button class="list_button exercise_button">
-                        <h4>#12 - </h4>
-                        <a>Verificar Número</a>
-                    </button>
-                </li>
-                <li>
-                    <button class="list_button exercise_button">
-                        <h4>#13 - </h4>
-                        <a>Par ou Impar</a>
-                    </button>
-                </li>
-                <li>
-                    <button class="list_button exercise_button">
-                        <h4>#14 - </h4>
-                        <a>Par ou Impar</a>
-                    </button>
-                </li>
-                <li>
-                    <button class="list_button exercise_button">
-                        <h4>#15 - </h4>
-                        <a>Qual é Maior?</a>
-                    </button>
-                </li>
-                <li>
-                    <button class="list_button exercise_button">
-                        <h4>#16 - </h4>
-                        <a>Triângulo?</a>
-                    </button>
-                </li>
-                <li>
-                    <button class="list_button exercise_button">
-                        <h4>#16 - </h4>
-                        <a>Imposto de Renda</a>
-                    </button>
-                </li>
-                <li>
-                    <button class="list_button exercise_button">
-                        <h4>#17 - </h4>
-                        <a>Média Ponderada</a>
-                    </button>
-                </li>
-                <li>
-                    <button class="list_button exercise_button">
-                        <h4>#18 - </h4>
-                        <a>Calculo Fabrica</a>
-                    </button>
-                </li>
-                <li>
-                    <button class="list_button exercise_button">
-                        <h4>#19 - </h4>
-                        <a>Calculo de Juros</a>
-                    </button>
-                </li>
-            </ul>
-
-            <!-- Challenges List -->
-            <ul id="challenges_list" class="menu_list">
-                <li>
-                    <button class="challenge_button list_button">
-                        <h4>#1 - </h4>
-                        <a>Separador de Idade</a>
-                    </button>
-                </li>
-                <li>
-                    <button class="challenge_button list_button">
-                        <h4>#2 - </h4>
-                        <a>Troca de Valores</a>
-                    </button>
-                </li>
-                <li>
-                    <button class="challenge_button list_button">
-                        <h4>#3 - </h4>
-                        <a>Qual é Maior?</a>
-                    </button>
-                </li>
-            </ul>
-
-            <!-- Extra List -->
-            <ul id="extra_list" class="menu_list">
-                <li>
-                    <button class="extra_button list_button">
-                        <h4>#1 - </h4>
-                        <a>??????</a>
-                    </button>
-                </li>
-            </ul>
-
-            <!-- Query Params List -->
-            <ul id="qp_list" class="menu_list">
-                <li>
-                    <button class="qp_button list_button">
-                        <h4>#1 - </h4>
-                        <a href="/views/query1.html">Somar Dois Números</a>
-                    </button>
-                </li>
-            </ul>
-
-        </nav>
-        <section id="content_section">
-
-        </section>
+        </main>
     </div>
     <script src="/js/menu_switch.js"></script>
     <script src="/js/ajax_response.js"></script>
