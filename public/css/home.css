@@ -59,12 +59,15 @@ body {
     height: 100vh;
 }
 
+.menu_wrapper {
+    /* This color is going to change with the js */
+    background-color: var(--menu-exercise-background-color);
+}
+
 .menu {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* This color is going to change with the js */
-    background-color: var(--menu-exercise-background-color);
 }
 
 /* Menu title and list toggle button */

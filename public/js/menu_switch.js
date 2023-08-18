@@ -1,5 +1,5 @@
 const body = document.getElementById('body');
-const menu = document.getElementById('menu');
+const menu = document.getElementById('menu_wrapper');
 const menu_list_title = document.getElementById('menu_list_title')
 const toggle_list_button = document.getElementById('toggle_list_button');
 
