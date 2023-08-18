@@ -235,3 +235,7 @@ body {
     transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
 }
 
+#content_section {
+    display: grid;
+    place-items: center;
+}
