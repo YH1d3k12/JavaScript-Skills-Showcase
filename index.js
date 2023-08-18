@@ -13,6 +13,7 @@ const __dirname = path.dirname(__filename);
 
 //Middleware to load static files
 app.use(express.static('public'));
+//Middleware which allows the request of json files
 app.use(express.json());
 
 app.get('/', (req, res) => {
@@ -21,8 +22,8 @@ app.get('/', (req, res) => {
 });
 
 app.get('/api/:id', (req, res) => {
-    const nome = req.query.nome; //Vai depois doi params
-    const id = req.params.id; //Vem antes do query
+    const nome = req.query.nome; //params Goes afters params
+    const id = req.params.id; //goes before query
 
     res.json
     ({ 
