@@ -10,9 +10,9 @@ function SumTwoNumbers()
     if (!isNaN(num1) && !isNaN(num2)) 
     {
         const result = num1 + num2;
-        document.getElementById('result').textContent = `Resultado: ${result}`;
+        document.getElementById('result_value').textContent = `${result}`;
     } else 
     {
-        document.getElementById('result').textContent = 'Insira dois números válidos';
+        document.getElementById('result_value').textContent = 'Insira dois números válidos';
     }
 }
