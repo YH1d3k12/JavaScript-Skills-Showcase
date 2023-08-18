@@ -11,6 +11,7 @@ const __dirname = path.dirname(__filename);
 
 //Middleware to load static files
 app.use(express.static('public'));
+app.use(express.json());
 
 app.get('/', (req, res) => {
     const filePath = path.join(__dirname, 'public/views/home.html');
@@ -42,7 +43,26 @@ app.get('/views/query1', (req, res) => {
     else
     {
         res.json({
-            message: `Resultado: ${num1 + num2}`
+            message: `A partir do GET Resultado: ${num1 + num2}`
+        });
+    }
+});
+
+app.post('/views/query1', (req, res) => {
+    let num1 = parseFloat(req.body.num1);
+    let num2 = parseFloat(req.body.num2);
+
+    if (isNaN(num1) || isNaN(num2))
+    {
+        res.status(501).json({
+            message: `Ensira dois números`
+        });
+        return;
+    }
+    else
+    {
+        res.json({
+            message: `A partir do Post Resultado: ${num1 + num2}`
         });
     }
 });
