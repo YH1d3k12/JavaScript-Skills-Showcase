@@ -1,14 +1,3 @@
-// This code prevents the default behavior of the <a> tag to avoid page reload.
-const a_links = document.querySelectorAll('.a_link');
-
-a_links.forEach(link => 
-{
-    link.addEventListener('click', (event) => 
-    {
-        event.preventDefault();
-    });
-});
-
 const exercise_buttons = document.querySelectorAll('.exercise_button');
 const challenge_buttons = document.querySelectorAll('.challenge_button');
 const content_section = document.getElementById('content_section');

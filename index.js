@@ -1,6 +1,8 @@
 import express, { request } from 'express'; // Import the Express library
 import { fileURLToPath } from 'url'; // Import the fileURLToPath function from the 'url' module
 import path from 'path';
+import { SumTwoNumbers } from './public/js/query_params_script/query1.js';
+
 
 const app = express(); // Create an instance of an Express application
 const PORT = process.env.PORT || 3000; // Choose a port for your server
@@ -29,42 +31,37 @@ app.get('/api/:id', (req, res) => {
     });
 });
 
-app.get('/views/query1', (req, res) => {
-    let num1 = parseFloat(req.query.num1);
-    let num2 = parseFloat(req.query.num2);
+// app.get('/views/query1', (req, res) => {
+//     let num1 = parseFloat(req.query.num1);
+//     let num2 = parseFloat(req.query.num2);
 
-    if (isNaN(num1) || isNaN(num2))
-    {
-        res.status(501).json({
-            message: `Ensira dois números`
-        });
-        return;
-    }
-    else
-    {
-        res.json({
-            message: `A partir do GET Resultado: ${num1 + num2}`
-        });
-    }
-});
+//     if (isNaN(num1) || isNaN(num2))
+//     {
+//         res.status(501).json({
+//             message: `Ensira dois números`
+//         });
+//         return;
+//     }
+//     else
+//     {
+//         res.json({
+//             message: `A partir do GET Resultado: ${num1 + num2}`
+//         });
+//     }
+// });
 
 app.post('/views/query1', (req, res) => {
-    let num1 = parseFloat(req.body.num1);
-    let num2 = parseFloat(req.body.num2);
+    const result = SumTwoNumbers
+    (
+        parseFloat(req.body.num1), 
+        parseFloat(req.body.num2)
+    )
+    
+    res.status(200).json
+    ({
+        message: `A partir do Post Resultado: ${result}`
+    });
 
-    if (isNaN(num1) || isNaN(num2))
-    {
-        res.status(501).json({
-            message: `Ensira dois números`
-        });
-        return;
-    }
-    else
-    {
-        res.json({
-            message: `A partir do Post Resultado: ${num1 + num2}`
-        });
-    }
 });
 
 app.listen(PORT, () => {
