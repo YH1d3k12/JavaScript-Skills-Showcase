@@ -1,11 +1,8 @@
-const exercise_buttons = document.querySelectorAll('.exercise_button');
-const challenge_buttons = document.querySelectorAll('.challenge_button');
-const content_section = document.getElementById('content_section');
+const list_button = document.querySelectorAll('.list_button');
 
-// Each exercise button gets an Event Listener that when clicked it will trigger loadExerciseContent method
 
-// Method for exercise buttons
-exercise_buttons.forEach(button => 
+// Each button gets an Event Listener that when clicked it will trigger loadExerciseContent method
+list_button.forEach(button => 
 {
     button.addEventListener('click', () => 
     {
@@ -14,16 +11,6 @@ exercise_buttons.forEach(button =>
     });
 });
 
-// Method for challenge buttons
-challenge_buttons.forEach(button => 
-{
-    button.addEventListener('click', () => 
-    {
-        const file_name = button.getAttribute('file_name');
-        loadExerciseContent(file_name);
-    });
-});
-    
 // File name is send as a variable to the method
 function loadExerciseContent(file_name) 
 {
