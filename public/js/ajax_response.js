@@ -1,4 +1,4 @@
-const list_button = document.querySelectorAll('.list_button');
+const list_button = document.querySelectorAll('.list-button');
 
 
 // Each button gets an Event Listener that when clicked it will trigger loadExerciseContent method
@@ -31,7 +31,7 @@ function loadExerciseContent(file_name)
         {
             if (xhr.readyState === 4 && xhr.status === 200) 
             {
-                content_section.innerHTML = xhr.responseText;
+                contentSection.innerHTML = xhr.responseText;
             }
         };
         // This sends the HTTP request to fetch the content.
