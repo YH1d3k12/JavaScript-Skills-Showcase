@@ -46,35 +46,32 @@
 body {
     /* This color is going to change with the js */
     background-color: var(--page-exercise-background-color);
-}
-
-.grid_container {
     display: grid;
-    grid-template-rows: 30vh 1fr;
+    grid-template-rows: 25vh 1fr;
     height: 100vh;
 }
 
-.menu_wrapper {
+.header-wrapper {
     /* This color is going to change with the js */
     background-color: var(--menu-exercise-background-color);
 }
 
-.menu {
+.nav-menu-container {
     display: flex;
     flex-direction: column;
     align-items: center;
 
-    height: 100vh;
+    height: 25vh;
 }
 
 /* Menu title and list toggle button */
 
-.title_and_button_wrapper {
+.title-button-wrapper {
     display: flex;
     margin: 30px 0px;
 }
 
-.menu_list_title {
+.menu-list-title {
     padding: 20px;
 
     font-family: 'Montserrat';
@@ -84,7 +81,7 @@ body {
     color: var(--menu-exercise-title-color);
 }
 
-.toggle_list_button {
+.toggle-list-button {
     width: 120px;
     border: solid 3px var(--button-exercise-border-color);
 
@@ -99,26 +96,30 @@ body {
     cursor: pointer;
 }
 
-/* Style for the scroll bar in list */
+/* List Wrapper and Container */
 
-.button_list_wrapper {
+.list-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     flex-grow: 1;
+
+    width: 80%;
+
     overflow: auto;
 }
 
-.button_list_wrapper::-webkit-scrollbar {
+.list-wrapper::-webkit-scrollbar {
     width: 0.000001px;
-}  
+} 
 
-.menu_list {
+.list-container {
     display: flex;
-    flex-direction: column;
-    align-content: flex-start;
+    flex-wrap: wrap;
 }
 
 /* Style for buttons */
-
-.list_button {
+.list-button {
     display: flex;
 
     width: 60px;
@@ -134,64 +135,93 @@ body {
     font-family: 'Montserrat';
     font-size: 1rem;
     font-weight: 500;
-
+    
     box-shadow: 10px 10px 25px -6px rgba(0,0,0,0.4);
     cursor: pointer;
 }
 
-.list_button h4 {
+.list-button h4 {
     padding-right: 10px;
 }
 
-.list_button a {
+.list-button a {
     display: none;
 }
 
-.list_button:hover h4, .list_button:hover a {
+.list-button:hover h4, .list-button:hover a {
     font-size: 1.1rem;
 }
 
 /* Disabling the other lists as default */
 
-#challenges_list {
+#challengesList {
     display: none;
 }
 
-#extra_list {
+#extraList {
     display: none;
 }
 
-#qp_list {
+#qpList {
     display: none;
 }
 
 /* This is where the content will be loaded */
 
-#content_section {
+#contentSection {
     display: grid;
     place-items: center;
 }
 
 @media (min-width: 1024px) {
 
-    .grid_container {
+    body {
         display: grid;
         grid-template-rows: none;
         grid-template-columns: 25vw 1fr;
+    }
+
+    .nav-menu-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    
         height: 100vh;
     }
 
-    .menu_list {
+    .list-wrapper {
+        width: 100%;
+    }
+
+    .list-container {
+        flex-direction: column;
+        justify-content: center;
+        flex-wrap: nowrap;
+    }
+
+    .list-button {
+        font-size: 1rem;
+    }
+
+    .list-button a {
+        display: hidden;
+    }
+
+}
+
+@media (min-width: 1280px) {
+
+    .list-container {
         flex-direction: column;
         align-content: none;
         justify-content: center;
     }
 
-    .list_button {
+    .list-button {
         width: 320px;
     }
 
-    .list_button a {
+    .list-button a {
         display: block;
     }
 

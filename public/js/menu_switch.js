@@ -1,13 +1,13 @@
 const body = document.getElementById('body');
-const menu = document.getElementById('menu_wrapper');
-const menu_list_title = document.getElementById('menu_list_title')
-const toggle_list_button = document.getElementById('toggle_list_button');
-const list_buttons = document.querySelectorAll('.list_button');;
+const menu = document.getElementById('header-wrapper');
+const menu_list_title = document.getElementById('menu-list-title')
+const toggle_list_button = document.getElementById('toggle-list-button');
+const list_buttons = document.querySelectorAll('.list-button');;
 
-const exercises_list = document.getElementById('exercises_list');
-const challenges_list = document.getElementById('challenges_list');
-const extra_list = document.getElementById('extra_list');
-const query_params = document.getElementById('qp_list');
+const exercises_list = document.getElementById('exercisesList');
+const challenges_list = document.getElementById('challengesList');
+const extra_list = document.getElementById('extraList');
+const query_params = document.getElementById('qpList');
 
 let current_list = 2;
 
