@@ -54,7 +54,7 @@ toggle_list_button.addEventListener('click', () => {
             button.style.color = 'var(--button-exercise-color)';
         });
         // show exercise list
-        exercises_list.style.display = 'block';
+        exercises_list.style.display = 'flex';
         // hides the remaining lists
         challenges_list.style.display = 'none';
         extra_list.style.display = 'none';
@@ -81,7 +81,7 @@ toggle_list_button.addEventListener('click', () => {
             button.style.color = 'var(--button-challenge-color)';
         });
         // show challenge list
-        challenges_list.style.display = 'block';
+        challenges_list.style.display = 'flex';
         // hides the remaining lists
         exercises_list.style.display = 'none';
         extra_list.style.display = 'none';
@@ -108,7 +108,7 @@ toggle_list_button.addEventListener('click', () => {
             button.style.color = 'var(--button-extra-color)';
         });
         // show challenge list
-        extra_list.style.display = 'block';
+        extra_list.style.display = 'flex';
         // hides the remaining lists
         exercises_list.style.display = 'none';
         challenges_list.style.display = 'none';
@@ -135,7 +135,7 @@ toggle_list_button.addEventListener('click', () => {
             button.style.color = 'var( --button-qp-color)';
         });
         // show challenge list
-        query_params.style.display = 'block';
+        query_params.style.display = 'flex';
         // hides the remaining lists
         exercises_list.style.display = 'none';
         challenges_list.style.display = 'none';

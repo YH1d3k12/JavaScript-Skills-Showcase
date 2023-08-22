@@ -50,7 +50,7 @@ body {
 
 .grid_container {
     display: grid;
-    grid-template-columns: 25vw 1fr;
+    grid-template-rows: 30vh 1fr;
     height: 100vh;
 }
 
@@ -63,6 +63,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    height: 100vh;
 }
 
 /* Menu title and list toggle button */
@@ -73,7 +75,7 @@ body {
 }
 
 .menu_list_title {
-    margin: 20px;
+    padding: 20px;
 
     font-family: 'Montserrat';
     font-size: 1.2rem;
@@ -98,29 +100,34 @@ body {
 }
 
 /* Style for the scroll bar in list */
-.menu_list {
-    justify-content: center;
 
-    max-height: calc(100vh - 150px);
+.button_list_wrapper {
+    flex-grow: 1;
     overflow: auto;
 }
 
-.menu_list::-webkit-scrollbar {
+.button_list_wrapper::-webkit-scrollbar {
     width: 0.000001px;
 }  
+
+.menu_list {
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+}
 
 /* Style for buttons */
 
 .list_button {
     display: flex;
 
-    width: 320px;
+    width: 60px;
 
     border: solid 1px;
     border-radius: 4px;
     border-color: var(--button-exercise-border-color);
     padding: 10px;
-    margin: 30px;
+    margin: 15px;
 
     background-color: var(--button-exercise-background-color);
 
@@ -136,8 +143,11 @@ body {
     padding-right: 10px;
 }
 
+.list_button a {
+    display: none;
+}
 
-.exercise_button:hover h4, .exercise_button:hover a {
+.list_button:hover h4, .list_button:hover a {
     font-size: 1.1rem;
 }
 
@@ -160,4 +170,29 @@ body {
 #content_section {
     display: grid;
     place-items: center;
+}
+
+@media (min-width: 1024px) {
+
+    .grid_container {
+        display: grid;
+        grid-template-rows: none;
+        grid-template-columns: 25vw 1fr;
+        height: 100vh;
+    }
+
+    .menu_list {
+        flex-direction: column;
+        align-content: none;
+        justify-content: center;
+    }
+
+    .list_button {
+        width: 320px;
+    }
+
+    .list_button a {
+        display: block;
+    }
+
 }
