@@ -1,9 +1,9 @@
 import express from 'express';
-import { SumTwoNumbers } from '../public/js/query_params_script/1_sum_two_numbers.js';
+import { SumTwoNumbers } from './queryScript/1_sum_two_numbers.js';
 
 const api_router = express.Router();
 
-api_router.get('/query1', (req, res) => {
+api_router.get('/', (req, res) => {
     let num1 = parseFloat(req.query.num1);
     let num2 = parseFloat(req.query.num2);
 

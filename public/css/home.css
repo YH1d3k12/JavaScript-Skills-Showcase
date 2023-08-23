@@ -100,12 +100,7 @@ body {
 
 .list-wrapper {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex-grow: 1;
-
-    width: 80%;
-
+	justify-content: center;
     overflow: auto;
 }
 
@@ -116,6 +111,7 @@ body {
 .list-container {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 /* Style for buttons */
