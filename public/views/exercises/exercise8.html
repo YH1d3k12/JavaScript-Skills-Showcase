@@ -48,17 +48,20 @@
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
 
+    .content-wrapper div {
+        overflow: auto;
+    }
+
+    .content-wrapper div::-webkit-scrollbar {
+        width: 0.000001px;
+    } 
+
     /* Title styles */
     .title-container {
         padding: 10px;
 
         font-family: 'Montserrat';
-        overflow: auto;
     }
-    
-    .title-container::-webkit-scrollbar {
-        width: 0.000001px;
-    } 
 
     .title {
         margin-bottom: 10px;
@@ -111,12 +114,7 @@
         background-color: #e4e4e4;
         border: solid 1px #ccc;;
         border-radius: 4px;
-        overflow: auto;
     }
-    
-    .result-container::-webkit-scrollbar {
-        width: 0.000001px;
-    } 
 
     .result {
         font-family: 'Montserrat';
