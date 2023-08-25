@@ -42,7 +42,7 @@
 
         height: 70vh;
         width: 90vw;
-        padding: 20px 40px;
+        padding: 20px;
 
         background-color: #f4f4f4;
         border-radius: 10px;
@@ -51,38 +51,39 @@
   
     /* Title styles */
     .title-container {
-        padding: 20px;
+        padding: 10px;
 
         font-family: 'Montserrat';
-        
-        border: solid 1px rgba(55, 92, 6, 0.527);
+
+        overflow: auto;
     }
+    
+    .title-container::-webkit-scrollbar {
+        width: 0.000001px;
+    } 
 
     .title {
-        text-align: center;
-
         margin-bottom: 10px;
-
+        
+        color: #1E1E24;
         font-size: 1.4rem;
         font-weight: 500;
-        color: #1E1E24;
+
+        text-align: center;
     }
 
     .description {
-        text-justify: justify;
-
+        color: #1E1E24;
         font-size: 0.7rem;
         font-weight: 500;
-        color: #1E1E24;
+
+        text-justify: justify;
     }
   
     /* labels and inputs style */
     .form-container {
         display: flex;
-        justify-content: space-around;
-        padding: 20px;
-        
-        border: solid 1px rgb(255, 0, 170);
+        padding: 10px;
     }
 
     .form-container div {
@@ -91,11 +92,9 @@
     }
   
     .label {
-        display: block;
-
         font-family: 'Montserrat';
         font-size: 0.7rem;
-        font-weight: bold;
+        font-weight: 700;
     }
   
     .input {
@@ -113,7 +112,7 @@
     /* result style */
     .result-container h2 {
         font-family: 'Montserrat';
-        font-size: 0.9rem;
+        font-size: 0.7rem;
         font-weight: 500;
     }
 
@@ -124,12 +123,11 @@
         justify-content: center; /* Horizontal alignment */
         align-items: center; /* Vertical alignment */
         
-        padding: 20px;
-        border: solid 1px red;
+        padding: 10px;
     }
 
     .button {
-        max-width: 180px;
+        max-width: 160px;
 
         padding: 10px 20px;
         border: none;
@@ -139,7 +137,7 @@
         color: #FBF5F3;
 
         font-family: 'Montserrat';
-        font-size: 0.8rem;
+        font-size: 0.6rem;
         font-weight: 500;
 
         cursor: pointer;
@@ -169,6 +167,10 @@
 
         .result-container h2 {
             font-size: 1.2rem;
+        }
+
+        .button {
+            font-size: 0.8rem;
         }
     }
 </style>
