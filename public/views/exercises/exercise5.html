@@ -1,32 +1,25 @@
 <div class="content-wrapper">
 
     <div class="title-container">
-        <h1 class="title">Titulo Aqui</h1>
-        <h4 class="description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-        </h4>
+        <h1 class="title">Conversor de Milhas</h1>
+        <h4 class="description">FUP que solicite a quantidade de milhas e converta para quilometros (1milha = 1.60934kms);</h4>
     </div>
 
     <div class="form-container">
-        <div>
-            <label for="input1" class="label" >Input 1</label>
-            <input id="input1" type="text" class="input">
-            <label for="input2" class="label" >Input 2</label>
-            <input id="input2" type="text" class="input">
-        </div>
+        <label for="miles" class="label" >Valor em Milhas</label>
+        <input id="miles" type="number" class="input">
+    </div>
 
-        <div class="result-container">
-            <h2>
-                Resultado: <span id="resultValue">-</span>
-            </h2>
-        </div>
+    <div class="result-container">
+        <h2 class="result">
+            Resultado: <span id="resultValue">-</span>
+        </h2>
     </div>
 
     <div class="button-container">
-        <button class="button" onclick="SumTwoNumbers()">Enviar</button>
+        <button class="button" onclick="ConvertMilesToKilometers()">Enviar</button>
     </div>
+    
 </div>
 
 <style>
@@ -41,7 +34,8 @@
 
     .content-wrapper {
         display: grid;
-        grid-template-rows: 2fr 7fr 2fr;
+        grid-template-rows: 2fr 7fr 2fr 2fr;
+        grid-template-columns: 1fr;
         justify-content: center;
 
         height: 70vh;
@@ -52,19 +46,21 @@
         border-radius: 10px;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
-  
+
+    .content-wrapper div {
+        overflow: auto;
+    }
+
+    .content-wrapper div::-webkit-scrollbar {
+        width: 0.000001px;
+    } 
+
     /* Title styles */
     .title-container {
         padding: 10px;
 
         font-family: 'Montserrat';
-
-        overflow: auto;
     }
-    
-    .title-container::-webkit-scrollbar {
-        width: 0.000001px;
-    } 
 
     .title {
         margin-bottom: 10px;
@@ -87,12 +83,10 @@
     /* labels and inputs style */
     .form-container {
         display: flex;
-        padding: 10px;
-    }
+        flex-direction: column;
+        align-items: flex-start;
 
-    .form-container div {
-        height: 100%;
-        width: 100%;
+        padding: 10px;
     }
   
     .label {
@@ -102,7 +96,7 @@
     }
   
     .input {
-        width: 80%;
+        width: 40%;
         padding: 8px;
         border: 1px solid #ccc;
         margin-bottom: 10px;
@@ -114,7 +108,14 @@
         border-radius: 4px;
     }
     /* result style */
-    .result-container h2 {
+
+    .result-container {
+        background-color: #e4e4e4;
+        border: solid 1px #ccc;;
+        border-radius: 4px;
+    }
+
+    .result {
         font-family: 'Montserrat';
         font-size: 0.7rem;
         font-weight: 500;
