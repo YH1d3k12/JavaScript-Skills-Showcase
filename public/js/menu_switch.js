@@ -7,7 +7,6 @@ const list_buttons = document.querySelectorAll('.list-button');;
 const exercises_list = document.getElementById('exercisesList');
 const challenges_list = document.getElementById('challengesList');
 const extra_list = document.getElementById('extraList');
-const query_params = document.getElementById('qpList');
 
 let current_list = 2;
 
@@ -58,7 +57,6 @@ toggle_list_button.addEventListener('click', () => {
         // hides the remaining lists
         challenges_list.style.display = 'none';
         extra_list.style.display = 'none';
-        query_params.style.display = 'none';
         // sets the value of current list
         current_list = 2;
     } 
@@ -85,11 +83,10 @@ toggle_list_button.addEventListener('click', () => {
         // hides the remaining lists
         exercises_list.style.display = 'none';
         extra_list.style.display = 'none';
-        query_params.style.display = 'none';
         // sets the value of current list
         current_list = 3;
     }
-    else if (current_list === 3)
+    else
     {
         // change background color for body and menu
         body.style.backgroundColor = 'var(--page-extra-background-color)';
@@ -112,34 +109,6 @@ toggle_list_button.addEventListener('click', () => {
         // hides the remaining lists
         exercises_list.style.display = 'none';
         challenges_list.style.display = 'none';
-        query_params.style.display = 'none';
-        // sets the value of current list
-        current_list = 4;
-    }
-    else 
-    {
-        // change background color for body and menu
-        body.style.backgroundColor = 'var(--page-qp-background-color)';
-        menu.style.backgroundColor = 'var(--menu-qp-background-color)';
-        // change menu list color and text
-        menu_list_title.style.color = 'var(--menu-qp-title-color)';
-        menu_list_title.textContent = 'Query Params';
-        // change toggle button colors and text
-        toggle_list_button.style.borderColor = 'var(--button-qp-border-color)';
-        toggle_list_button.style.backgroundColor = 'var(--button-qp-background-color)';
-        toggle_list_button.style.color = 'var(--button-qp-color)';
-        // change toggle button colors and text
-        list_buttons.forEach(button => {
-            button.style.borderColor = 'var(--button-qp-border-color)';
-            button.style.backgroundColor = 'var(--button-qp-background-color)';
-            button.style.color = 'var( --button-qp-color)';
-        });
-        // show challenge list
-        query_params.style.display = 'flex';
-        // hides the remaining lists
-        exercises_list.style.display = 'none';
-        challenges_list.style.display = 'none';
-        extra_list.style.display = 'none';
         // sets the value of current list
         current_list = 1;
     }

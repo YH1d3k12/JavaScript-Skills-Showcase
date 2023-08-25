@@ -21,17 +21,17 @@
     /* Extra layout colors */
     --page-extra-background-color:#87CBAC;
     --menu-extra-background-color:#34623F;
-    --menu-extra-title-color:#1E1E24;
+    --menu-extra-title-color:#FBF5F3;
     --button-extra-border-color:#598335;
     --button-extra-background-color:#4F772D;
-    --button-extra-color:#1E1E24;
-    /* Query Params layour colors */
+    --button-extra-color:#FBF5F3;
+    /* Query Params layour colors
     --page-qp-background-color:#FADF94;
     --menu-qp-background-color: #C4A85B;
     --menu-qp-title-color:#1E1E24;
     --button-qp-border-color:#ffedbb;
     --button-qp-background-color:#FFE9AD;
-    --button-qp-color:#1E1E24;
+    --button-qp-color:#1E1E24; */
 }
 
 * {
