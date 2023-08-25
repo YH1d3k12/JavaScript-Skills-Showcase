@@ -6,23 +6,22 @@
     </div>
 
     <div class="form-container">
-        <div>
-            <label for="num1" class="label" >Primeiro Valor</label>
-            <input id="num1" type="number" class="input">
-            <label for="num2" class="label" >Segundo Valor</label>
-            <input id="num2" type="number" class="input">
-        </div>
+        <label for="num1" class="label" >Primeiro Valor</label>
+        <input id="num1" type="number" class="input">
+        <label for="num2" class="label" >Segundo Valor</label>
+        <input id="num2" type="number" class="input">
+    </div>
 
-        <div class="result-container">
-            <h2>
-                Resultado: <span id="resultValue">-</span>
-            </h2>
-        </div>
+    <div class="result-container">
+        <h2 class="result">
+            Resultado: <span id="resultValue">-</span>
+        </h2>
     </div>
 
     <div class="button-container">
         <button class="button" onclick="SumTwoNumbers()">Enviar</button>
     </div>
+    
 </div>
 
 <style>
@@ -37,7 +36,7 @@
 
     .content-wrapper {
         display: grid;
-        grid-template-rows: 1fr 4fr 1fr;
+        grid-template-rows: 2fr 7fr 2fr 2fr;
         justify-content: center;
 
         height: 70vh;
@@ -83,12 +82,10 @@
     /* labels and inputs style */
     .form-container {
         display: flex;
-        padding: 10px;
-    }
+        flex-direction: column;
+        align-items: flex-start;
 
-    .form-container div {
-        height: 100%;
-        width: 100%;
+        padding: 10px;
     }
   
     .label {
@@ -110,7 +107,14 @@
         border-radius: 4px;
     }
     /* result style */
-    .result-container h2 {
+
+    .result-container {
+        background-color: #e4e4e4;
+        border: solid 1px #ccc;;
+        border-radius: 4px;
+    }
+
+    .result {
         font-family: 'Montserrat';
         font-size: 0.7rem;
         font-weight: 500;
