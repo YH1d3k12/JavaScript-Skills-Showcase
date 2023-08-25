@@ -1,7 +1,7 @@
 function SumTwoNumbers() 
 {
-    const num1 = parseFloat(document.getElementById('num1').value);
-    const num2 = parseFloat(document.getElementById('num2').value);
+    let num1 = parseFloat(document.getElementById('num1').value);
+    let num2 = parseFloat(document.getElementById('num2').value);
 
     // Checks if method is being clicked
     console.log("Clicou na função SumTwoNumbers");
