@@ -1,4 +1,4 @@
-# Senac_Exercises
+# JavaScript Skill Showcase
 This is a repository containing exercises from the 'Jovem Programador' developer course at Senac.
 
 Use the following command to start the application: npm start
