@@ -40,7 +40,7 @@ const sendData2 = () => {
 
     fetchSendHttpRequest('POST', 'http://localhost:3000/2/', {
         salary: firstValue,
-        hoursWorked: "secondValue"
+        hoursWorked: secondValue
     }).then(responseData => {
         console.log(responseData);
     }).catch(err => {
