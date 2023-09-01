@@ -1,4 +1,4 @@
-const sendHttpRequest = (method, url, data) => {
+const xhrSendHttpRequest = (method, url, data) => {
     console.log("click")
 
     // Promises are used to deal with asynchronous requests.
@@ -48,8 +48,6 @@ const sendHttpRequest = (method, url, data) => {
             reject('Something went wrong!');
         }
 
-
-
         // this sends the data as JSON
         xhr.send(JSON.stringify(data));
     });
@@ -64,11 +62,11 @@ const sendHttpRequest = (method, url, data) => {
 // };
 
 // Post stuff
-const sendData = () => {
+const sendData1 = () => {
     const firstValue = document.getElementById('num1').value;
     const secondValue = document.getElementById('num2').value;
 
-    sendHttpRequest('POST', 'http://localhost:3000/1/', {
+    xhrSendHttpRequest('POST', 'http://localhost:3000/1/', {
         num1: firstValue,
         num2: secondValue
     }).then(responseData => {
