@@ -1,4 +1,6 @@
-import axios from 'axios';
+import axios from '../../node_modules/axios';
+
+const sendButton = document.getElementById('buttonExercise4');
 // Axios returns a promise which you can work with
 // the data is already parsed and converted into JavaScript
 
@@ -35,15 +37,20 @@ import axios from 'axios';
 //     });
 // };
 
-const sendData4 = () => {
+const sendData = () => {
+    console.log("CLICK")
     const firstValue = document.getElementById('celsius').value;
 
     axios.post(
         'http://localhost:3000/4/',
-        firstValue
+        {celcius: firstValue}
     ).then(response => {
+        const result = response.data.result;
+        document.getElementById('resultValue').textContent = result;
         console.log(response);
     }).catch(err => {
         console.log(err, err.response);
     });
 }
+
+sendButton.addEventListener('click', sendData);
