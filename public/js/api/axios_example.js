@@ -1,6 +1,20 @@
-import axios from '../../node_modules/axios';
+function PostExercise4 () {
+    // console.log("CLICK")
+    const value1 = document.getElementById('celsius').value;
 
-const sendButton = document.getElementById('buttonExercise4');
+    axios.post(
+        'http://localhost:3000/4/',
+        {celsius: value1}
+    ).then(response => {
+        const result = response.data.result;
+        document.getElementById('resultValue').textContent = result;
+        console.log(response);
+        console.log("FUNFOU RESPONSE")
+    }).catch(err => {
+        console.log(err, err.response);
+        console.log("FUNFOU ERRO")
+    });
+}
 // Axios returns a promise which you can work with
 // the data is already parsed and converted into JavaScript
 
@@ -36,21 +50,3 @@ const sendButton = document.getElementById('buttonExercise4');
 //         console.log(err, err.response);
 //     });
 // };
-
-const sendData = () => {
-    console.log("CLICK")
-    const firstValue = document.getElementById('celsius').value;
-
-    axios.post(
-        'http://localhost:3000/4/',
-        {celcius: firstValue}
-    ).then(response => {
-        const result = response.data.result;
-        document.getElementById('resultValue').textContent = result;
-        console.log(response);
-    }).catch(err => {
-        console.log(err, err.response);
-    });
-}
-
-sendButton.addEventListener('click', sendData);

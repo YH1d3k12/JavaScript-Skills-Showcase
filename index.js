@@ -1,6 +1,5 @@
-import express, { request } from 'express'; // Import the Express library
-
-import views_routes from './routes/views_router.js';
+const express = require('express');
+const views_routes = require('./routes/views_router.js');
 
 const app = express(); // Create an instance of an Express application
 const PORT = process.env.PORT || 3001; // Choose a port for your server

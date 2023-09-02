@@ -1,14 +1,16 @@
 function ConvertMilesToKilometers() 
-{
-    let miles = parseFloat(document.getElementById('miles').value);
+    {
+        let miles = parseFloat(document.getElementById('miles').value);
+        const req = requester('post', '5', { miles }, ({ data: { message }}) => {
+            if (!isNaN(message)) 
+            {
+                document.getElementById('resultValue').textContent = `A distância em quilometros é: ${message}`;
+            } else {
+                document.getElementById('resultValue').textContent = 'Insira um número válido';
+            }
+        })
+        console.log(req)
+    
+        //isNan returns true if the value is not a number, so !isNan returns true if the value is a number
 
-    //isNan returns true if the value is not a number, so !isNan returns true if the value is a number
-    if (!isNaN(miles)) 
-    {
-        const result = miles * 1.60934
-        document.getElementById('resultValue').textContent = `A distância em quilometros é: ${result}`;
-    } else 
-    {
-        document.getElementById('resultValue').textContent = 'Insira um número válido';
     }
-}
