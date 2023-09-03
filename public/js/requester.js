@@ -5,8 +5,6 @@
  * @param {*} callback Handles the response from the HTTP request
  */
 
-const axios = require('axios');
-
 const requester = async (method, endpoint, data, callback) => {
     // Console log the input data
     console.log(data)
@@ -19,13 +17,10 @@ const requester = async (method, endpoint, data, callback) => {
             data
         );
 
-        const result = response.data.result;
-        callback(result)
+        callback(response)
     }
     catch (err)
     {
         console.log (err, err.response);
     };
 };
-
-module.exports = { requester };
