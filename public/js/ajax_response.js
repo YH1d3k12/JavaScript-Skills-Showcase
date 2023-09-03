@@ -31,7 +31,21 @@ function loadExerciseContent(file_name)
         {
             if (xhr.readyState === 4 && xhr.status === 200) 
             {
-                contentSection.innerHTML = xhr.responseText;
+                // Creates a new instance of DOMParser
+                const parser = new DOMParser();
+                    
+                // DOMParser analises the characters as XML or HTML
+                const responseDoc = parser.parseFromString(xhr.responseText, 'text/html');
+
+                // Reads the content within content-wrapper
+                const responseContent = responseDoc.querySelector('.content-wrapper');
+                                        
+                // If there is a child within contentSection the following code will delete it
+                // After that, the new content will be loaded
+                if (contentSection.firstChild) {
+                    contentSection.removeChild(contentSection.firstChild);
+                }
+                contentSection.appendChild(responseContent);                
             }
         };
         // This sends the HTTP request to fetch the content.
