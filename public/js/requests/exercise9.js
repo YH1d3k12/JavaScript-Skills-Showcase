@@ -1,8 +1,9 @@
-async function ConvertMilesToKilometers() 
+async function BMICalculator() 
 {
-    let miles = document.getElementById('miles').value;
+    let weight = document.getElementById('weight').value;
+    let height = document.getElementById('height').value;
 
-    const req = await requester('post', '5', { miles }, ({ data: { message }}) => {
+    const req = await requester('post', '9', { weight, height }, ({ data: { message }}) => {
         if (!isNaN(message)) 
         {
             document.getElementById('resultValue').textContent = `A distância em quilometros é: ${message}`;
