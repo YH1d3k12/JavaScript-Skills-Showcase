@@ -7,7 +7,9 @@ async function SumTwoNumbers()
         if (!isNaN(num1) && !isNaN(num2)) 
         {
             document.getElementById('resultValue').textContent = `A soma dos números é: ${message}`;
-        } else {
+        } 
+        else
+        {
             document.getElementById('resultValue').textContent = 'Insira um número válido';
         }
     })
