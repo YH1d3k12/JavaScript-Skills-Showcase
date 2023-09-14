@@ -2,7 +2,7 @@ async function CreateMultiplicationTable()
 {
     let number = parseFloat(document.getElementById('number').value);
 
-    const req = await requester('post', '8', { number }, ({ data }) => {
+    const req = await requester('post', '1/8', { number }, ({ data }) => {
         if (data.message && Array.isArray(data.message)) 
         {
             // Limpar qualquer conteúdo existente
