@@ -1,14 +1,13 @@
 <div class="content-wrapper">
 
     <div class="title-container">
-        <h1 class="title">Tabuada até 10</h1>
-        <h4 class="description">FUP que peça um número e imprima a tabuada deste número;
-        </h4>
+        <h1 class="title">Media Escolar</h1>
+        <h4 class="description">FUP que calcule a média aritmética das 3 notas de um aluno e mostre, além do valor da média, uma mensagem de "Aprovado", caso a média seja igual ou superior a 7, a mensagem "Recuperação", caso a média se igual ou superior a 5 e inferior a 7, ou a mensagem “Reprovado”, caso a média seja inferior a 5;</h4>
     </div>
 
     <div class="form-container">
-        <label for="number" class="label" >Número</label>
-        <input id="number" type="number" class="input">
+        <label for="grades" class="label" >Notas, separe as notas com , e use . para valores decimais</label>
+        <input id="grades" type="string" class="input">
     </div>
 
     <div class="result-container">
@@ -18,7 +17,7 @@
     </div>
 
     <div class="button-container">
-        <button class="button" onclick="CreateMultiplicationTable()">Enviar</button>
+        <button class="button" onclick="CalcStudentGrades()">Enviar</button>
     </div>
     
 </div>
