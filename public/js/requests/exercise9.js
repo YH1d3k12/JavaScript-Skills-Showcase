@@ -9,7 +9,7 @@ async function CalcStudentGrades()
     const grades = gradesArray.map(grade => ({ score: grade.trim() }));
 
     const req = await requester('post', '1/9', { grades }, ({ data }) => {
-        document.getElementById('resultValue').textContent = `Sua média foi de ${data.score} você foi: ${data.mesage}`;
+        document.getElementById('resultValue').textContent = `Sua média foi de ${data.score} você foi: ${data.message}`;
     })
     console.log(req);
 };
